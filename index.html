@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>科學體重與健康管理 — 學習網頁</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col font-sans">
+
+    <!-- Top Navigation Header -->
+    <header class="sticky top-0 z-50 bg-emerald-700 text-white shadow-lg backdrop-blur-md bg-opacity-95">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-3">
+            <div class="flex items-center space-x-3">
+                <div class="bg-white text-emerald-700 p-2 rounded-xl shadow-md">
+                    <i class="fas fa-heart-pulse text-2xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold tracking-wide">科學體重與健康管理</h1>
+                    <p class="text-xs text-emerald-200">體重，不僅僅是數字，更是守護內在健康</p>
+                </div>
+            </div>
+            
+            <!-- Overall Progress Bar -->
+            <div class="bg-emerald-800/60 p-2.5 rounded-xl border border-emerald-600/50 flex items-center space-x-3 w-full sm:w-auto">
+                <span class="text-xs font-semibold text-emerald-100 whitespace-nowrap">學習進度</span>
+                <div class="w-32 bg-emerald-950 rounded-full h-2.5 overflow-hidden">
+                    <div id="progress-bar" class="bg-emerald-300 h-2.5 rounded-full transition-all duration-500" style="width: 0%"></div>
+                </div>
+                <span id="progress-text" class="text-xs font-bold text-emerald-200">0%</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="max-w-6xl mx-auto px-4 py-8 flex-1 grid grid-cols-1 lg:grid-cols-4 gap-8">
+
+        <!-- Sidebar Navigation -->
+        <aside class="lg:col-span-1">
+            <div class="sticky top-24 bg-white p-5 rounded-2xl shadow-sm border border-slate-200">
+                <h2 class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-4">課程目錄導航</h2>
+                <nav class="space-y-1">
+                    <a href="#m1" class="flex items-center text-sm font-medium text-slate-600 hover:text-emerald-600 hover:bg-emerald-50 p-2.5 rounded-lg transition-colors">
+                        <span class="w-6 text-emerald-600 font-bold">01</span> 體重與內在健康
+                    </a>
+                    <a href="#m2" class="flex items-center text-sm font-medium text-slate-600 hover:text-emerald-600 hover:bg-emerald-50 p-2.5 rounded-lg transition-colors">
+                        <span class="w-6 text-emerald-600 font-bold">02</span> 肥胖成因與危害
+                    </a>
+                    <a href="#m3" class="flex items-center text-sm font-medium text-slate-600 hover:text-emerald-600 hover:bg-emerald-50 p-2.5 rounded-lg transition-colors">
+                        <span class="w-6 text-emerald-600 font-bold">03</span> 體重與健康關聯
+                    </a>
+                    <a href="#m4" class="flex items-center text-sm font-medium text-slate-600 hover:text-emerald-600 hover:bg-emerald-50 p-2.5 rounded-lg transition-colors">
+                        <span class="w-6 text-emerald-600 font-bold">04</span> 合理膳食與營養
+                    </a>
+                    <a href="#m5" class="flex items-center text-sm font-medium text-slate-600 hover:text-emerald-600 hover:bg-emerald-50 p-2.5 rounded-lg transition-colors">
+                        <span class="w-6 text-emerald-600 font-bold">05</span> 輕斷食與自愈
+                    </a>
+                    <a href="#m6" class="flex items-center text-sm font-medium text-slate-600 hover:text-emerald-600 hover:bg-emerald-50 p-2.5 rounded-lg transition-colors">
+                        <span class="w-6 text-emerald-600 font-bold">06</span> 管理期常見問題
+                    </a>
+                </nav>
+
+                <div class="mt-6 pt-6 border-t border-slate-100 bg-emerald-50/50 p-3 rounded-xl">
+                    <p class="text-xs text-slate-500 leading-relaxed">
+                        <i class="fas fa-circle-info text-emerald-600 mr-1"></i>
+                        點選影片右上角按鈕可另開全螢幕或外部下載播放。
+                    </p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Course Content Area -->
+        <main class="lg:col-span-3 space-y-10">
+
+            <!-- MODULE 1 -->
+            <section id="m1" class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden transition-all hover:shadow-md">
+                <div class="p-6 border-b border-slate-100 bg-gradient-to-r from-emerald-50/60 to-transparent">
+                    <div class="flex items-center space-x-3">
+                        <span class="bg-emerald-600 text-white font-bold text-xs px-3 py-1 rounded-full">單元 01</span>
+                        <h2 class="text-xl font-bold text-slate-800">體重，不僅僅是數字，更是守護內在健康</h2>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <!-- Key Takeaways -->
+                    <div class="mb-6 bg-slate-50 p-4 rounded-xl border-l-4 border-emerald-500 space-y-2">
+                        <h3 class="font-bold text-slate-700 text-sm flex items-center">
+                            <i class="fas fa-lightbulb text-amber-500 mr-2"></i>學習重點整理
+                        </h3>
+                        <ul class="text-sm text-slate-600 space-y-1.5 list-disc list-inside">
+                            <li><b>擺脫數字焦慮：</b>體重單一指標無法反映體脂率與肌肉量，避免盲目追求公斤數下降。</li>
+                            <li><b>內臟脂肪風險：</b>內臟脂肪過高是慢性發炎、代謝症候群與心血管疾病的主要誘因。</li>
+                            <li><b>健康導向減重：</b>核心目標在於提升基礎代謝率與維護器官健康。</li>
+                        </ul>
+                    </div>
+
+                    <!-- Video Grid -->
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <h4 class="text-sm font-semibold text-slate-700"><i class="fas fa-play-circle text-emerald-600 mr-1.5"></i>科普短片</h4>
+                            <label class="flex items-center space-x-2 text-xs text-slate-500 cursor-pointer">
+                                <input type="checkbox" onchange="updateProgress()" class="progress-check rounded text-emerald-600 focus:ring-emerald-500">
+                                <span>標記為已完成</span>
+                            </label>
+                        </div>
+                        <div class="bg-slate-900 rounded-xl overflow-hidden shadow-sm">
+                            <video controls class="w-full aspect-video" preload="metadata">
+                                <source src="https://video.liaoningweilaishengwu.cn/uploads/bsimg/kepu.mp4" type="video/mp4">
+                                您的瀏覽器不支援 HTML5 影片。
+                            </video>
+                            <div class="p-3 bg-slate-800 text-xs text-slate-300 flex justify-between items-center">
+                                <span>科普短片：體重與內在健康</span>
+                                <a href="https://video.liaoningweilaishengwu.cn/uploads/bsimg/kepu.mp4" target="_blank" class="text-emerald-400 hover:text-emerald-300 flex items-center space-x-1">
+                                    <span>另開連結</span> <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MODULE 2 -->
+            <section id="m2" class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden transition-all hover:shadow-md">
+                <div class="p-6 border-b border-slate-100 bg-gradient-to-r from-emerald-50/60 to-transparent">
+                    <div class="flex items-center space-x-3">
+                        <span class="bg-emerald-600 text-white font-bold text-xs px-3 py-1 rounded-full">單元 02</span>
+                        <h2 class="text-xl font-bold text-slate-800">剖析肥胖多重因素，警示錯誤減肥方式的潛在傷害</h2>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="mb-6 bg-slate-50 p-4 rounded-xl border-l-4 border-emerald-500 space-y-2">
+                        <h3 class="font-bold text-slate-700 text-sm flex items-center">
+                            <i class="fas fa-lightbulb text-amber-500 mr-2"></i>學習重點整理
+                        </h3>
+                        <ul class="text-sm text-slate-600 space-y-1.5 list-disc list-inside">
+                            <li><b>肥胖成因：</b>高糖高油飲食、精緻澱粉過量、長期睡眠不足（皮質醇升高）與缺乏運動。</li>
+                            <li><b>錯誤減肥四大傷害：</b>極端節食引發代謝暴跌、盲目服藥破壞腸道菌叢、單一飲食導致營養不良與月經失調、劇烈運動引發關節損傷。</li>
+                        </ul>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Video Upper -->
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center">
+                                <h4 class="text-sm font-semibold text-slate-700"><i class="fas fa-film text-emerald-600 mr-1.5"></i>上集課程</h4>
+                                <label class="flex items-center space-x-2 text-xs text-slate-500 cursor-pointer">
+                                    <input type="checkbox" onchange="updateProgress()" class="progress-check rounded text-emerald-600 focus:ring-emerald-500">
+                                    <span>已完成</span>
+                                </label>
+                            </div>
+                            <div class="bg-slate-900 rounded-xl overflow-hidden shadow-sm">
+                                <video controls class="w-full aspect-video" preload="metadata">
+                                    <source src="https://video.liaoningweilaishengwu.cn/uploads/bsimg/（上集）肥胖的元凶及错误减肥的危害.mp4" type="video/mp4">
+                                </video>
+                                <div class="p-3 bg-slate-800 text-xs text-slate-300 flex justify-between items-center">
+                                    <span>肥胖的元凶及錯誤減肥的危害 (上)</span>
+                                    <a href="https://video.liaoningweilaishengwu.cn/uploads/bsimg/（上集）肥胖的元凶及错误减肥的危害.mp4" target="_blank" class="text-emerald-400 hover:text-emerald-300">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Video Lower -->
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center">
+                                <h4 class="text-sm font-semibold text-slate-700"><i class="fas fa-film text-emerald-600 mr-1.5"></i>下集課程</h4>
+                                <label class="flex items-center space-x-2 text-xs text-slate-500 cursor-pointer">
+                                    <input type="checkbox" onchange="updateProgress()" class="progress-check rounded text-emerald-600 focus:ring-emerald-500">
+                                    <span>已完成</span>
+                                </label>
+                            </div>
+                            <div class="bg-slate-900 rounded-xl overflow-hidden shadow-sm">
+                                <video controls class="w-full aspect-video" preload="metadata">
+                                    <source src="https://video.liaoningweilaishengwu.cn/uploads/bsimg/（下集）肥胖的元凶及错误减肥的危害.mp4" type="video/mp4">
+                                </video>
+                                <div class="p-3 bg-slate-800 text-xs text-slate-300 flex justify-between items-center">
+                                    <span>肥胖的元凶及錯誤減肥的危害 (下)</span>
+                                    <a href="https://video.liaoningweilaishengwu.cn/uploads/bsimg/（下集）肥胖的元凶及错误减肥的危害.mp4" target="_blank" class="text-emerald-400 hover:text-emerald-300">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MODULE 3 -->
+            <section id="m3" class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden transition-all hover:shadow-md">
+                <div class="p-6 border-b border-slate-100 bg-gradient-to-r from-emerald-50/60 to-transparent">
+                    <div class="flex items-center space-x-3">
+                        <span class="bg-emerald-600 text-white font-bold text-xs px-3 py-1 rounded-full">單元 03</span>
+                        <h2 class="text-xl font-bold text-slate-800">解讀體重與身體狀態的深層關聯，樹立科學管理認知</h2>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="mb-6 bg-slate-50 p-4 rounded-xl border-l-4 border-emerald-500 space-y-2">
+                        <h3 class="font-bold text-slate-700 text-sm flex items-center">
+                            <i class="fas fa-lightbulb text-amber-500 mr-2"></i>學習重點整理
+                        </h3>
+                        <ul class="text-sm text-slate-600 space-y-1.5 list-disc list-inside">
+                            <li><b>預防慢性病：</b>體重管理是預防第二型糖尿病、高血壓及脂肪肝的關鍵防線。</li>
+                            <li><b>身體成分分析 (BCA)：</b>關注肌肉量、體水分與內臟脂肪等級，打造可持續的健康生活方式。</li>
+                        </ul>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center">
+                                <h4 class="text-sm font-semibold text-slate-700"><i class="fas fa-film text-emerald-600 mr-1.5"></i>上集課程</h4>
+                                <label class="flex items-center space-x-2 text-xs text-slate-500 cursor-pointer">
+                                    <input type="checkbox" onchange="updateProgress()" class="progress-check rounded text-emerald-600 focus:ring-emerald-500">
+                                    <span>已完成</span>
+                                </label>
+                            </div>
+                            <div class="bg-slate-900 rounded-xl overflow-hidden shadow-sm">
+                                <video controls class="w-full aspect-video" preload="metadata">
+                                    <source src="https://video.liaoningweilaishengwu.cn/uploads/bsimg/（上集）体重与健康不得不说的关系.mp4" type="video/mp4">
+                                </video>
+                                <div class="p-3 bg-slate-800 text-xs text-slate-300 flex justify-between items-center">
+                                    <span>體重與健康不得不說的關係 (上)</span>
+                                    <a href="https://video.liaoningweilaishengwu.cn/uploads/bsimg/（上集）体重与健康不得不说的关系.mp4" target="_blank" class="text-emerald-400 hover:text-emerald-300">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center">
+                                <h4 class="text-sm font-semibold text-slate-700"><i class="fas fa-film text-emerald-600 mr-1.5"></i>下集課程</h4>
+                                <label class="flex items-center space-x-2 text-xs text-slate-500 cursor-pointer">
+                                    <input type="checkbox" onchange="updateProgress()" class="progress-check rounded text-emerald-600 focus:ring-emerald-500">
+                                    <span>已完成</span>
+                                </label>
+                            </div>
+                            <div class="bg-slate-900 rounded-xl overflow-hidden shadow-sm">
+                                <video controls class="w-full aspect-video" preload="metadata">
+                                    <source src="https://video.liaoningweilaishengwu.cn/uploads/bsimg/（下集）体重与健康不得不说的关系.mp4" type="video/mp4">
+                                </video>
+                                <div class="p-3 bg-slate-800 text-xs text-slate-300 flex justify-between items-center">
+                                    <span>體重與健康不得不說的關係 (下)</span>
+                                    <a href="https://video.liaoningweilaishengwu.cn/uploads/bsimg/（下集）体重与健康不得不说的关系.mp4" target="_blank" class="text-emerald-400 hover:text-emerald-300">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MODULE 4 -->
+            <section id="m4" class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden transition-all hover:shadow-md">
+                <div class="p-6 border-b border-slate-100 bg-gradient-to-r from-emerald-50/60 to-transparent">
+                    <div class="flex items-center space-x-3">
+                        <span class="bg-emerald-600 text-white font-bold text-xs px-3 py-1 rounded-full">單元 04</span>
+                        <h2 class="text-xl font-bold text-slate-800">講解均衡營養搭配，讓每一餐吃得科學、輕盈</h2>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="mb-6 bg-slate-50 p-4 rounded-xl border-l-4 border-emerald-500 space-y-2">
+                        <h3 class="font-bold text-slate-700 text-sm flex items-center">
+                            <i class="fas fa-lightbulb text-amber-500 mr-2"></i>學習重點整理
+                        </h3>
+                        <ul class="text-sm text-slate-600 space-y-1.5 list-disc list-inside">
+                            <li><b>「吃對」優於「少吃」：</b>盲目少吃只會引發代謝補償，均衡營養才能驅動燃脂。</li>
+                            <li><b>三大營養素原則：</b>足量蛋白質（維護肌肉） + 優質複合碳水（穩定血糖） + 膳食纖維與好油。</li>
+                            <li><b>進食順序：</b>先喝水/湯 ➔ 蔬菜/蛋白質 ➔ 最後吃優質碳水。</li>
+                        </ul>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center">
+                                <h4 class="text-sm font-semibold text-slate-700"><i class="fas fa-film text-emerald-600 mr-1.5"></i>上集課程</h4>
+                                <label class="flex items-center space-x-2 text-xs text-slate-500 cursor-pointer">
+                                    <input type="checkbox" onchange="updateProgress()" class="progress-check rounded text-emerald-600 focus:ring-emerald-500">
+                                    <span>已完成</span>
+                                </label>
+                            </div>
+                            <div class="bg-slate-900 rounded-xl overflow-hidden shadow-sm">
+                                <video controls class="w-full aspect-video" preload="metadata">
+                                    <source src="https://video.liaoningweilaishengwu.cn/uploads/bsimg/（上集）合理膳食吃对比少吃更重要.mp4" type="video/mp4">
+                                </video>
+                                <div class="p-3 bg-slate-800 text-xs text-slate-300 flex justify-between items-center">
+                                    <span>合理膳食吃對比少吃更重要 (上)</span>
+                                    <a href="https://video.liaoningweilaishengwu.cn/uploads/bsimg/（上集）合理膳食吃对比少吃更重要.mp4" target="_blank" class="text-emerald-400 hover:text-emerald-300">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center">
+                                <h4 class="text-sm font-semibold text-slate-700"><i class="fas fa-film text-emerald-600 mr-1.5"></i>下集課程</h4>
+                                <label class="flex items-center space-x-2 text-xs text-slate-500 cursor-pointer">
+                                    <input type="checkbox" onchange="updateProgress()" class="progress-check rounded text-emerald-600 focus:ring-emerald-500">
+                                    <span>已完成</span>
+                                </label>
+                            </div>
+                            <div class="bg-slate-900 rounded-xl overflow-hidden shadow-sm">
+                                <video controls class="w-full aspect-video" preload="metadata">
+                                    <source src="https://video.liaoningweilaishengwu.cn/uploads/bsimg/（下集）合理膳食吃对比少吃更重要.mp4" type="video/mp4">
+                                </video>
+                                <div class="p-3 bg-slate-800 text-xs text-slate-300 flex justify-between items-center">
+                                    <span>合理膳食吃對比少吃更重要 (下)</span>
+                                    <a href="https://video.liaoningweilaishengwu.cn/uploads/bsimg/（下集）合理膳食吃对比少吃更重要.mp4" target="_blank" class="text-emerald-400 hover:text-emerald-300">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MODULE 5 -->
+            <section id="m5" class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden transition-all hover:shadow-md">
+                <div class="p-6 border-b border-slate-100 bg-gradient-to-r from-emerald-50/60 to-transparent">
+                    <div class="flex items-center space-x-3">
+                        <span class="bg-emerald-600 text-white font-bold text-xs px-3 py-1 rounded-full">單元 05</span>
+                        <h2 class="text-xl font-bold text-slate-800">科學調節飲食節奏，給身心留出休憩與修復的窗口</h2>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="mb-6 bg-slate-50 p-4 rounded-xl border-l-4 border-emerald-500 space-y-2">
+                        <h3 class="font-bold text-slate-700 text-sm flex items-center">
+                            <i class="fas fa-lightbulb text-amber-500 mr-2"></i>學習重點整理
+                        </h3>
+                        <ul class="text-sm text-slate-600 space-y-1.5 list-disc list-inside">
+                            <li><b>輕斷食科學機制：</b>控制進食時間（如 16:8 斷食法），促進胰島素下降並觸發細胞自噬（Autophagy）修復。</li>
+                            <li><b>腸胃休養：</b>減輕消化器官負擔，提升精神專注度與代謝彈性。</li>
+                        </ul>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center">
+                                <h4 class="text-sm font-semibold text-slate-700"><i class="fas fa-film text-emerald-600 mr-1.5"></i>上集課程</h4>
+                                <label class="flex items-center space-x-2 text-xs text-slate-500 cursor-pointer">
+                                    <input type="checkbox" onchange="updateProgress()" class="progress-check rounded text-emerald-600 focus:ring-emerald-500">
+                                    <span>已完成</span>
+                                </label>
+                            </div>
+                            <div class="bg-slate-900 rounded-xl overflow-hidden shadow-sm">
+                                <video controls class="w-full aspect-video" preload="metadata">
+                                    <source src="https://video.liaoningweilaishengwu.cn/uploads/bsimg/（上集）轻断食唤醒身体的自愈开关.mp4" type="video/mp4">
+                                </video>
+                                <div class="p-3 bg-slate-800 text-xs text-slate-300 flex justify-between items-center">
+                                    <span>輕斷食喚醒身體的自愈開關 (上)</span>
+                                    <a href="https://video.liaoningweilaishengwu.cn/uploads/bsimg/（上集）轻断食唤醒身体的自愈开关.mp4" target="_blank" class="text-emerald-400 hover:text-emerald-300">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center">
+                                <h4 class="text-sm font-semibold text-slate-700"><i class="fas fa-film text-emerald-600 mr-1.5"></i>下集課程</h4>
+                                <label class="flex items-center space-x-2 text-xs text-slate-500 cursor-pointer">
+                                    <input type="checkbox" onchange="updateProgress()" class="progress-check rounded text-emerald-600 focus:ring-emerald-500">
+                                    <span>已完成</span>
+                                </label>
+                            </div>
+                            <div class="bg-slate-900 rounded-xl overflow-hidden shadow-sm">
+                                <video controls class="w-full aspect-video" preload="metadata">
+                                    <source src="https://video.liaoningweilaishengwu.cn/uploads/bsimg/（下集）轻断食唤醒身体的自愈开关.mp4" type="video/mp4">
+                                </video>
+                                <div class="p-3 bg-slate-800 text-xs text-slate-300 flex justify-between items-center">
+                                    <span>輕斷食喚醒身體的自愈開關 (下)</span>
+                                    <a href="https://video.liaoningweilaishengwu.cn/uploads/bsimg/（下集）轻断食唤醒身体的自愈开关.mp4" target="_blank" class="text-emerald-400 hover:text-emerald-300">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MODULE 6 -->
+            <section id="m6" class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden transition-all hover:shadow-md">
+                <div class="p-6 border-b border-slate-100 bg-gradient-to-r from-emerald-50/60 to-transparent">
+                    <div class="flex items-center space-x-3">
+                        <span class="bg-emerald-600 text-white font-bold text-xs px-3 py-1 rounded-full">單元 06</span>
+                        <h2 class="text-xl font-bold text-slate-800">回應管理中的種種疑惑，助您從容度過適應期</h2>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="mb-6 bg-slate-50 p-4 rounded-xl border-l-4 border-emerald-500 space-y-2">
+                        <h3 class="font-bold text-slate-700 text-sm flex items-center">
+                            <i class="fas fa-lightbulb text-amber-500 mr-2"></i>學習重點整理
+                        </h3>
+                        <ul class="text-sm text-slate-600 space-y-1.5 list-disc list-inside">
+                            <li><b>突破平臺期：</b>調整運動模式、微調三大營養素比例、保持充足睡眠與紓解壓力。</li>
+                            <li><b>應對嘴饞與情緒進食：</b>分清生理飢餓與心理需求，善用高纖低熱量原型食物替代。</li>
+                            <li><b>合理的健康減重速度：</b>每週 0.5–1 kg 為平穩安全的減重目標。</li>
+                        </ul>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center">
+                                <h4 class="text-sm font-semibold text-slate-700"><i class="fas fa-film text-emerald-600 mr-1.5"></i>上集課程</h4>
+                                <label class="flex items-center space-x-2 text-xs text-slate-500 cursor-pointer">
+                                    <input type="checkbox" onchange="updateProgress()" class="progress-check rounded text-emerald-600 focus:ring-emerald-500">
+                                    <span>已完成</span>
+                                </label>
+                            </div>
+                            <div class="bg-slate-900 rounded-xl overflow-hidden shadow-sm">
+                                <video controls class="w-full aspect-video" preload="metadata">
+                                    <source src="https://video.liaoningweilaishengwu.cn/uploads/bsimg/（上集）体重管理期常见问题解答.mp4" type="video/mp4">
+                                </video>
+                                <div class="p-3 bg-slate-800 text-xs text-slate-300 flex justify-between items-center">
+                                    <span>體重管理期常見問題解答 (上)</span>
+                                    <a href="https://video.liaoningweilaishengwu.cn/uploads/bsimg/（上集）体重管理期常见问题解答.mp4" target="_blank" class="text-emerald-400 hover:text-emerald-300">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center">
+                                <h4 class="text-sm font-semibold text-slate-700"><i class="fas fa-film text-emerald-600 mr-1.5"></i>下集課程</h4>
+                                <label class="flex items-center space-x-2 text-xs text-slate-500 cursor-pointer">
+                                    <input type="checkbox" onchange="updateProgress()" class="progress-check rounded text-emerald-600 focus:ring-emerald-500">
+                                    <span>已完成</span>
+                                </label>
+                            </div>
+                            <div class="bg-slate-900 rounded-xl overflow-hidden shadow-sm">
+                                <video controls class="w-full aspect-video" preload="metadata">
+                                    <source src="https://video.liaoningweilaishengwu.cn/uploads/bsimg/（下集）体重管理期常见问题解答.mp4" type="video/mp4">
+                                </video>
+                                <div class="p-3 bg-slate-800 text-xs text-slate-300 flex justify-between items-center">
+                                    <span>體重管理期常見問題解答 (下)</span>
+                                    <a href="https://video.liaoningweilaishengwu.cn/uploads/bsimg/（下集）体重管理期常见问题解答.mp4" target="_blank" class="text-emerald-400 hover:text-emerald-300">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 text-slate-400 text-xs py-6 text-center border-t border-slate-700 mt-12">
+        <p>科學體重與健康管理 — 數位學習門戶網站</p>
+    </footer>
+
+    <!-- Script for interactive features -->
+    <script>
+        function updateProgress() {
+            const checkboxes = document.querySelectorAll('.progress-check');
+            const checkedCount = document.querySelectorAll('.progress-check:checked').length;
+            const total = checkboxes.length;
+            const percentage = Math.round((checkedCount / total) * 100);
+
+            document.getElementById('progress-bar').style.width = percentage + '%';
+            document.getElementById('progress-text').innerText = percentage + '%';
+        }
+    </script>
+</body>
+</html>
